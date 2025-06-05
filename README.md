@@ -19,7 +19,7 @@ Usuários do sistema podem enviar **mensagens SOS**, **alertas comunitários**, 
 1. **Clone este repositório:**
 
    ```bash
-   git clone https://github.com/seu-usuario/ConectaSOS.git
+   git clone https://github.com/Gastaldl/ConectaSOS.Estrutura.git
 
 
 2. **Abra o projeto no Visual Studio 2022.**
