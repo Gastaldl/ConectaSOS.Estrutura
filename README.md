@@ -101,6 +101,6 @@ C:\Users\[SEU_USUÁRIO]\source\repos\ConectaSOS.Estrutura\ConectaSOS.UI\bin\Debu
 
 ## 📌 Observações finais
 
-* O projeto **não requer banco de dados**, pois toda a persistência é feita em arquivos `.json` locais.
 * A arquitetura do projeto segue o padrão MVC, com separação clara entre entidades, repositórios, controladores e interface.
 * Todo o conteúdo do histórico é armazenado de forma criptografada simulada (tag [CRYPTO]).
+* O projeto **não requer banco de dados**, pois toda a persistência é feita em arquivos `.json` locais.
