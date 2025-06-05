@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConectaSOS.Controller\ConectaSOS.Controller.csproj" />
+    <ProjectReference Include="..\ConectaSOS.Model\ConectaSOS.Model.csproj" />
+    <ProjectReference Include="..\ConectaSOS.Repository\ConectaSOS.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
