@@ -36,6 +36,19 @@ Usuários do sistema podem enviar **mensagens SOS**, **alertas comunitários**, 
 
 ---
 
+## 👤 Usuários de exemplo
+
+O sistema já vem com dois usuários cadastrados para fins de teste:
+
+| Nome          | Papel   | Login | Senha    |
+| ------------- | ------- | ----- | -------- |
+| Administrador | Admin   | admin | 1234     |
+| João Silva    | Morador | joao  | senha123 |
+
+Esses usuários estão disponíveis por padrão ao iniciar o sistema pela primeira vez.
+
+---
+
 ## 📁 Estrutura de Pastas
 
 ```
@@ -90,6 +103,3 @@ C:\Users\[SEU_USUÁRIO]\source\repos\ConectaSOS.Estrutura\ConectaSOS.UI\bin\Debu
 
 * O projeto **não requer banco de dados**, pois toda a persistência é feita em arquivos `.json` locais.
 * Ideal para **simulações locais**, projetos educacionais ou estudos sobre arquitetura em camadas.
-
-Se quiser, posso te ajudar a criar um `LICENSE`, `contributing.md`, ou organizar os releases no GitHub. Deseja mais alguma coisa?
-```
