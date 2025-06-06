@@ -29,6 +29,20 @@ namespace ConectaSOS.Controller.Controllers
                     string.IsNullOrWhiteSpace(prioridade))
                     throw new ArgumentException("Todos os campos devem ser preenchidos.");
 
+                var prioridadeNormalizada = prioridade.Trim().ToLower();
+                if (prioridadeNormalizada != "alta" &&
+                    prioridadeNormalizada != "média" &&
+                    prioridadeNormalizada != "media" &&
+                    prioridadeNormalizada != "baixa")
+                    throw new ArgumentException("Prioridade inválida. Use apenas 'Alta', 'Média' ou 'Baixa'.");
+
+                // Padroniza a prioridade com primeira letra maiúscula
+                prioridade = char.ToUpper(prioridadeNormalizada[0]) + prioridadeNormalizada.Substring(1);
+
+                // Corrige "media" para "Média"
+                if (prioridade == "Media")
+                    prioridade = "Média";
+
                 var mensagem = new MensagemSOS(titulo, conteudo, localizacao, prioridade);
                 _mensagemRepo.Adicionar(mensagem);
 
