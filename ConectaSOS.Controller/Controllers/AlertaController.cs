@@ -29,6 +29,13 @@ namespace ConectaSOS.Controller.Controllers
                     string.IsNullOrWhiteSpace(tipo))
                     throw new ArgumentException("Todos os campos são obrigatórios.");
 
+                var tipoNormalizado = tipo.Trim().ToLower();
+                if (tipoNormalizado != "urgente" && tipoNormalizado != "informativo")
+                    throw new ArgumentException("Tipo inválido. Use apenas 'Urgente' ou 'Informativo'.");
+
+                // Padroniza o tipo com a primeira letra maiúscula
+                tipo = char.ToUpper(tipoNormalizado[0]) + tipoNormalizado.Substring(1);
+
                 var alerta = new Alerta(titulo, conteudo, tipo);
                 _repo.Adicionar(alerta);
 
@@ -44,4 +51,3 @@ namespace ConectaSOS.Controller.Controllers
         }
     }
 }
-
