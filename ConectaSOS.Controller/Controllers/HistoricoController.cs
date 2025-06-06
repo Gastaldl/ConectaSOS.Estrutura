@@ -20,11 +20,11 @@ namespace ConectaSOS.Controller.Controllers
         {
             var mensagens = _repo.ListarHistorico();
 
-            // Aplica o filtro (sos, alerta, todos)
+            // Aplica o filtro usando os prefixos reais: [SOS], [ALERTA]
             List<string> mensagensFiltradas = filtro.ToLower() switch
             {
-                "sos" => mensagens.Where(m => m.ToLower().Contains("[crypto]")).ToList(),
-                "alerta" => mensagens.Where(m => m.ToLower().Contains("[crypto-alerta]")).ToList(),
+                "sos" => mensagens.Where(m => m.Trim().ToUpper().StartsWith("[SOS]")).ToList(),
+                "alerta" => mensagens.Where(m => m.Trim().ToUpper().StartsWith("[ALERTA]")).ToList(),
                 _ => mensagens
             };
 
@@ -34,7 +34,7 @@ namespace ConectaSOS.Controller.Controllers
                 return;
             }
 
-            // Coloca mensagens com "prioridade: alta" primeiro
+            // Ordena: mensagens com prioridade alta primeiro (caso existam)
             var prioridadeAlta = mensagensFiltradas
                 .Where(m => m.ToLower().Contains("prioridade: alta"))
                 .ToList();

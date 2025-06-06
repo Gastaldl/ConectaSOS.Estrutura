@@ -27,7 +27,7 @@ namespace ConectaSOS.UI
                     Console.Clear();
                     Console.WriteLine("==== CONECTA SOS ====");
                     Console.WriteLine("[1] Fazer login");
-                    Console.WriteLine("[2] Cadastrar novo usuário");
+                    Console.WriteLine("[2] Fazer cadastro");
                     Console.WriteLine("[0] Sair");
                     Console.Write("Escolha uma opção: ");
                     string escolha = Console.ReadLine();
